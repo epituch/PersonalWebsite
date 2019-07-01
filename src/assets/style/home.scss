@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+$font-stack: 'Karla', sans-serif;
+html *{
+  font-family: $font-stack !important;
+}
+.home-wrapper {
+  text-align: center;
+}
+
+.img-wrapper {
+  grid-area: i;
+  padding: 20px;
+  max-height: 60vh;
+  overflow: hidden;
+}
+
+.responsive-img {
+  max-width: 90%;
+  max-height: initial;
+}
+
+.heading-wrapper {
+  grid-area: h;
+  color: white;
+  font-size: 60px;
+}
+
+.text-wrapper {
+  grid-area: t;
+  color: white;
+  font-size: 40px;
+}
+
+@media (min-width: 900px) {
+  .home-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr) repeat(2, 2fr) repeat(2, 1fr);
+    grid-template-areas: ". . . ." "i . . ." "i . h ." "i . t ." "i . . ." ". . . ."
+  }
+
+  .img-wrapper {
+    padding: 0;
+    max-height: 100%;
+  }
+
+  .responsive-img {
+    max-width: 73%;
+  }
+
+  .text-wrapper{
+    p {
+      display: inline-block;
+      padding: 5px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .home-wrapper {
+    grid-template-columns: 2fr 3fr 1fr 3fr 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr) repeat(2, 2fr) repeat(2, 1fr);
+    text-align: center;
+    grid-template-areas: ". . . . . ." ". i . . . ." ". i . h . ." ". i . t . ." ". i . . . ." ". . . . . ."
+  }
+}
