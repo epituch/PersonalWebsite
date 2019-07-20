@@ -15,7 +15,7 @@
         name: "Projects",
         data() {
             return {
-                projects: ['Boiler Faves', 'Distress Helper', 'Personal Website', 'Purdue CoRec Monitor', 'SplitSound Android', 'SplitSound Website']
+                projects: ['Boiler Faves', 'HulaLoop', 'Personal Website', 'Purdue Orbital Ground Station GUI', 'Translate Game']
             }
         },
         components: {
